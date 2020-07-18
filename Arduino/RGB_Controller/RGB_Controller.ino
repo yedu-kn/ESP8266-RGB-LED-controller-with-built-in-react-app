@@ -1,6 +1,8 @@
-#include <ESP8266WebServer.h>
+// install https://github.com/me-no-dev/ESPAsyncWebServer and https://github.com/me-no-dev/ESPAsyncTCP
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
+#include <ESPAsyncWebServer.h>
+#include <FS.h>
 #include <WiFiClient.h>
 
 #ifndef STASSID
@@ -11,40 +13,14 @@
 const char *ssid = STASSID;
 const char *password = STAPSK;
 
-ESP8266WebServer server(80);
-
-const String postForms = "<html>\
-  <head>\
-    <title>ESP8266 Web Server POST handling</title>\
-    <style>\
-      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
-    </style>\
-  </head>\
-  <body>\
-  </body>\
-</html>";
-
-void handleRoot() {
-	server.send(200, "text/html", postForms);
-}
-
-void handleForm() {
-	Serial.println(server.arg("R"));
-	Serial.println(server.arg("G"));
-	Serial.println(server.arg("B"));
-	Serial.println(server.arg("Brightness"));
-	Serial.println(server.arg("color"));
-
-	server.sendHeader("Access-Control-Allow-Origin", "*");
-	server.send(200, "text/plain", "Value Updated");
-}
+AsyncWebServer server(80);
 
 void setRGB(int r = 255, int g = 255, int b = 255, int brightness = 50) {
-
 }
 
 void setup(void) {
 	Serial.begin(115200);
+	SPIFFS.begin();
 	WiFi.begin(ssid, password);
 	Serial.println("");
 
@@ -64,14 +40,30 @@ void setup(void) {
 		Serial.println("MDNS responder started");
 	}
 
-	server.on("/", handleRoot);
+	server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 
-	server.on("/postform/", handleForm);
+	server.on("/postform", HTTP_POST, [](AsyncWebServerRequest *request) {
+		Serial.print("R: ");
+		Serial.print(request->getParam("R", true)->value());
+
+		Serial.print(", G: ");
+		Serial.print(request->getParam("G", true)->value());
+
+		Serial.print(", B: ");
+		Serial.print(request->getParam("B", true)->value());
+
+		Serial.print(", Hex: ");
+		Serial.print(request->getParam("color", true)->value());
+
+		Serial.print(", Brightness: ");
+		Serial.println(request->getParam("Brightness", true)->value());
+
+		request->send(200, "application/json", "done");
+	});
 
 	server.begin();
 	Serial.println("HTTP server started");
 }
 
 void loop(void) {
-	server.handleClient();
 }
