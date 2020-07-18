@@ -28,26 +28,31 @@ class App extends Component {
   };
 
   postData() {
-    // TODO: send to server after debounce
-    console.log(this.state);
-    fetch('https://esp.local', {
+    const formdata = new FormData();
+    Object.keys(this.state).forEach(k => {
+      formdata.append(k, this.state[k])
+    })
+
+    var requestOptions = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.state),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-    })
+      body: formdata,
+      redirect: 'follow',
+    };
+
+    fetch('http://192.168.1.12/postform/', requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log('error', error));
   }
 
   render() {
     return (
       <div style={{ display: 'flex-inline', justifyContent: 'center' }}>
         <div>
-          <Slider brightnessChange={this.onBrightnessChange}  color={this.state.color}/>
+          <Slider
+            brightnessChange={this.onBrightnessChange}
+            color={this.state.color}
+          />
           <ColorPicker
             colorChange={this.onColorChange}
             color={this.state.color}
