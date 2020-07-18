@@ -14,6 +14,7 @@ class App extends Component {
 
   onBrightnessChange = (event) => {
     this.setState({ Brightness: event });
+    this.postData();
   };
 
   onColorChange = (color) => {
@@ -23,31 +24,19 @@ class App extends Component {
       B: color.rgb.b,
       color: color.hex,
     });
+    this.postData();
   };
 
+  postData() {
+    // TODO: send to server after debounce
+    console.log(this.state);
+  }
+
   render() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/server', true);
-
-    //Send the proper header information along with the request
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-    xhr.onreadystatechange = function () {
-      // Call a function when the state changes.
-      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        // Request finished. Do processing here.
-      }
-    };
-    xhr.send(
-      `Brightness=${this.state.Brightness}&R=${this.state.R}&G=${this.state.G}&B=${this.state.B}`
-    );
-    //xhr.send("value2=34");
-    // xhr.send(document);
-
     return (
       <div style={{ display: 'flex-inline', justifyContent: 'center' }}>
         <div>
-          <Slider brightnessChange={this.onBrightnessChange} />
+          <Slider brightnessChange={this.onBrightnessChange}  color={this.state.color}/>
           <ColorPicker
             colorChange={this.onColorChange}
             color={this.state.color}
