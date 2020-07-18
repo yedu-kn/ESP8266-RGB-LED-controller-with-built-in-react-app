@@ -1,9 +1,9 @@
 import React from 'react';
 import CircularSlider from '@fseehawer/react-circular-slider';
 
-const Slider = ({brightnessChange}) => {
+const Slider = ({ brightnessChange }) => {
   return (
-    <div className='tc pt5'>
+    <div className="tc pt5">
       <CircularSlider
         label="Brightness"
         min={0}
@@ -22,10 +22,9 @@ const Slider = ({brightnessChange}) => {
         trackSize={24}
         knobeDraggable={false}
         onChange={brightnessChange}
-      >
-      </CircularSlider>
+      ></CircularSlider>
     </div>
-    )
-  };
+  );
+};
 
-  export default Slider;
+export default Slider;
