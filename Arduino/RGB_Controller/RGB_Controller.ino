@@ -1,8 +1,9 @@
-// install: 
-//		https://github.com/me-no-dev/ESPAsyncWebServer, 
+// install:
+//		https://github.com/me-no-dev/ESPAsyncWebServer,
 //		https://github.com/me-no-dev/ESPAsyncTCP
 // SPIFS Unloader Plugin for Arduino IDE: https://github.com/esp8266/arduino-esp8266fs-plugin
 
+#include <Adafruit_NeoPixel.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <ESPAsyncWebServer.h>
@@ -14,12 +15,20 @@
 #define STAPSK "NullReferenceException#123"
 #endif
 
+#define PIN D2
+#define NUMPIXELS 64
+
 const char *ssid = STASSID;
 const char *password = STAPSK;
 
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 AsyncWebServer server(80);
 
-void setRGB(int r = 255, int g = 255, int b = 255, int brightness = 50) {
+void setColor(int r = 255, int g = 255, int b = 255, int brightness = 50) {
+	for (int i = 0; i <= 19; i++) {
+		pixels.setPixelColor(i, pixels.Color(r, g, b));
+	}
+	pixels.show();
 }
 
 void setup(void) {
@@ -27,6 +36,8 @@ void setup(void) {
 	SPIFFS.begin();
 	WiFi.begin(ssid, password);
 	Serial.println("");
+
+	pixels.begin();
 
 	// Wait for connection
 	while (WiFi.status() != WL_CONNECTED) {
@@ -47,20 +58,23 @@ void setup(void) {
 	server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 
 	server.on("/postform", HTTP_POST, [](AsyncWebServerRequest *request) {
+		int r = request->getParam("R", true)->value().toInt();
+		int g = request->getParam("G", true)->value().toInt();
+		int b = request->getParam("B", true)->value().toInt();
+		int brightness = request->getParam("Brightness", true)->value().toInt();
+
 		Serial.print("R: ");
-		Serial.print(request->getParam("R", true)->value());
-
+		Serial.print(r);
 		Serial.print(", G: ");
-		Serial.print(request->getParam("G", true)->value());
-
+		Serial.print(g);
 		Serial.print(", B: ");
-		Serial.print(request->getParam("B", true)->value());
-
-		Serial.print(", Hex: ");
-		Serial.print(request->getParam("color", true)->value());
-
+		Serial.print(b);
 		Serial.print(", Brightness: ");
-		Serial.println(request->getParam("Brightness", true)->value());
+		Serial.print(brightness);
+		Serial.print(", Hex: ");
+		Serial.println(request->getParam("color", true)->value());
+
+		setColor(r, g, b, brightness);
 
 		request->send(200, "application/json", "done");
 	});
