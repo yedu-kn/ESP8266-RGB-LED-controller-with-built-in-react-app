@@ -1,4 +1,8 @@
-// install https://github.com/me-no-dev/ESPAsyncWebServer and https://github.com/me-no-dev/ESPAsyncTCP
+// install: 
+//		https://github.com/me-no-dev/ESPAsyncWebServer, 
+//		https://github.com/me-no-dev/ESPAsyncTCP
+// SPIFS Unloader Plugin for Arduino IDE: https://github.com/esp8266/arduino-esp8266fs-plugin
+
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <ESPAsyncWebServer.h>
