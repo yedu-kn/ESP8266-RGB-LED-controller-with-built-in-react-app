@@ -3,7 +3,7 @@ import CircularSlider from '@fseehawer/react-circular-slider';
 
 const Slider = ({ brightnessChange, color }) => {
   return (
-    <div className="tc pt5">
+    <div className="tc pb4">
       <CircularSlider
         label="Brightness"
         min={0}
@@ -15,14 +15,14 @@ const Slider = ({ brightnessChange, color }) => {
         labelBottom={true}
         labelFontSize="20px"
         knobColor="#005a58"
-        progressColorFrom="#fff"
+        progressColorFrom='#fff'
         progressColorTo={color}
         progressSize={20}
         trackColor="#eeeeee"
         trackSize={24}
         knobeDraggable={false}
         onChange={brightnessChange}
-      ></CircularSlider>
+      ></CircularSlider>      
     </div>
   );
 };
