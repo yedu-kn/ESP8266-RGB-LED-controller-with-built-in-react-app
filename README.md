@@ -1,4 +1,4 @@
-# Smart Bulb
+# Smart-Bulb
 
 Controlling RGB LED from ESP using React web app
 
