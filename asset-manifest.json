@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Smart-Bulb/static/css/main.af99092d.chunk.css",
+    "main.js": "/Smart-Bulb/static/js/main.90ac7b32.chunk.js",
+    "main.js.map": "/Smart-Bulb/static/js/main.90ac7b32.chunk.js.map",
+    "runtime-main.js": "/Smart-Bulb/static/js/runtime-main.d123f186.js",
+    "runtime-main.js.map": "/Smart-Bulb/static/js/runtime-main.d123f186.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.42d69e78.chunk.js": "/Smart-Bulb/static/js/2.42d69e78.chunk.js",
+    "static/js/2.42d69e78.chunk.js.map": "/Smart-Bulb/static/js/2.42d69e78.chunk.js.map",
+    "index.html": "/Smart-Bulb/index.html",
+    "precache-manifest.e35954c2129e5968de92812d302e9dea.js": "/Smart-Bulb/precache-manifest.e35954c2129e5968de92812d302e9dea.js",
+    "service-worker.js": "/Smart-Bulb/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.af99092d.chunk.css.map": "/Smart-Bulb/static/css/main.af99092d.chunk.css.map",
+    "static/js/2.42d69e78.chunk.js.LICENSE.txt": "/Smart-Bulb/static/js/2.42d69e78.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d123f186.js",
+    "static/css/2.3c03f26f.chunk.css",
+    "static/js/2.42d69e78.chunk.js",
+    "static/css/main.af99092d.chunk.css",
+    "static/js/main.90ac7b32.chunk.js"
+  ]
+}
