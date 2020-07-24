@@ -7,6 +7,7 @@ import './App.css';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 import Effects from './Effects';
 import Bulb from './Bulb';
+import {debounce} from 'lodash';
 
 class App extends Component {
   state = {
@@ -56,7 +57,7 @@ class App extends Component {
       () => this.postData());
   }
 
-  postData() {
+  postData = debounce(() => {
     const formdata = new FormData();
     Object.keys(this.state).forEach(k => {
       formdata.append(k, this.state[k])
@@ -73,7 +74,7 @@ class App extends Component {
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log('error', error));
-  }
+  }, 300);
 
   render() {
     return (
@@ -85,10 +86,9 @@ class App extends Component {
               powerChange={this.onPowerChange}
               power={this.state.power} />
           </div>
-          <div style={{display: 'flex', justifyContent: 'center', outline:'none'}}>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
             <Carousel
-              style={{outline:'none'}}
-              className=''
+              className={'slide'}
               dragging={false}
               swiping={false}
               wrapAround={true}

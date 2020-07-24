@@ -1,0 +1,4 @@
+.slide:focus-within {
+  outline: none !important;
+  border: none !important;
+}
