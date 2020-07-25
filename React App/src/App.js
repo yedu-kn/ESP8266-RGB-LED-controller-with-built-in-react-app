@@ -72,7 +72,7 @@ class App extends Component {
     // fetch('http://192.168.1.12/postform/', requestOptions) // replace with esp ip
     fetch('/postform/', requestOptions) // on hw ip is not needed
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      //.then((result) => console.log(result))
       .catch((error) => console.log('error', error));
   }, 300);
 
