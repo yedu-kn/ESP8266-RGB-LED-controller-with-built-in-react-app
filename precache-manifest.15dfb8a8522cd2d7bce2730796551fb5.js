@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "29439054b4086e8512e4062a213f7d00",
+    "revision": "fa5aa43e6ac8fa239ac6918f0d78d117",
     "url": "/Smart-Bulb/index.html"
   },
   {
