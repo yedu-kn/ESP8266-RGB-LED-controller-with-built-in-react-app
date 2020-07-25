@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5c7381c.chunk.css",
-    "main.js": "/static/js/main.db5d65a9.chunk.js",
-    "main.js.map": "/static/js/main.db5d65a9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.61333123.js",
-    "runtime-main.js.map": "/static/js/runtime-main.61333123.js.map",
-    "static/css/2.3c03f26f.chunk.css": "/static/css/2.3c03f26f.chunk.css",
-    "static/js/2.73e3f01b.chunk.js": "/static/js/2.73e3f01b.chunk.js",
-    "static/js/2.73e3f01b.chunk.js.map": "/static/js/2.73e3f01b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.cfaccdb02b1f7831de9106f2e5051634.js": "/precache-manifest.cfaccdb02b1f7831de9106f2e5051634.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.3c03f26f.chunk.css.map": "/static/css/2.3c03f26f.chunk.css.map",
-    "static/css/main.a5c7381c.chunk.css.map": "/static/css/main.a5c7381c.chunk.css.map",
-    "static/js/2.73e3f01b.chunk.js.LICENSE.txt": "/static/js/2.73e3f01b.chunk.js.LICENSE.txt"
+    "main.css": "/Smart-Bulb/static/css/main.a5c7381c.chunk.css",
+    "main.js": "/Smart-Bulb/static/js/main.ce0a27db.chunk.js",
+    "main.js.map": "/Smart-Bulb/static/js/main.ce0a27db.chunk.js.map",
+    "runtime-main.js": "/Smart-Bulb/static/js/runtime-main.d123f186.js",
+    "runtime-main.js.map": "/Smart-Bulb/static/js/runtime-main.d123f186.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.73e3f01b.chunk.js": "/Smart-Bulb/static/js/2.73e3f01b.chunk.js",
+    "static/js/2.73e3f01b.chunk.js.map": "/Smart-Bulb/static/js/2.73e3f01b.chunk.js.map",
+    "index.html": "/Smart-Bulb/index.html",
+    "precache-manifest.d0c1f6f436a9cd04248428b661d18b2a.js": "/Smart-Bulb/precache-manifest.d0c1f6f436a9cd04248428b661d18b2a.js",
+    "service-worker.js": "/Smart-Bulb/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.a5c7381c.chunk.css.map": "/Smart-Bulb/static/css/main.a5c7381c.chunk.css.map",
+    "static/js/2.73e3f01b.chunk.js.LICENSE.txt": "/Smart-Bulb/static/js/2.73e3f01b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.61333123.js",
+    "static/js/runtime-main.d123f186.js",
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.73e3f01b.chunk.js",
     "static/css/main.a5c7381c.chunk.css",
-    "static/js/main.db5d65a9.chunk.js"
+    "static/js/main.ce0a27db.chunk.js"
   ]
 }
