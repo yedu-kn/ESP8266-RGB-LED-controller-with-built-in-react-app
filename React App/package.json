@@ -1,6 +1,5 @@
 {
   "name": "smart_bulb",
-  "homepage": "https://yedu-kn.github.io/Smart-Bulb/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

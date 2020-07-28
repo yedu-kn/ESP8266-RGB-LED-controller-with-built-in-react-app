@@ -11,7 +11,7 @@ import {debounce} from 'lodash';
 
 class App extends Component {
   state = {
-    power:true,
+    power:1,
     effect: 1,
     speed:30,
     Brightness: 20,
@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   onPowerChange = () => {
-    this.setState(({power: !this.state.power}),
+    this.setState(({power: ~~(!this.state.power)}),
       () => this.postData());
   }
 
