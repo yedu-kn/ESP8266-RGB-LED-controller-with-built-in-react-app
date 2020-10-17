@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Smart-Bulb/static/css/main.a5c7381c.chunk.css",
-    "main.js": "/Smart-Bulb/static/js/main.361bcda5.chunk.js",
-    "main.js.map": "/Smart-Bulb/static/js/main.361bcda5.chunk.js.map",
-    "runtime-main.js": "/Smart-Bulb/static/js/runtime-main.d123f186.js",
-    "runtime-main.js.map": "/Smart-Bulb/static/js/runtime-main.d123f186.js.map",
-    "static/css/2.3c03f26f.chunk.css": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css",
-    "static/js/2.d476893d.chunk.js": "/Smart-Bulb/static/js/2.d476893d.chunk.js",
-    "static/js/2.d476893d.chunk.js.map": "/Smart-Bulb/static/js/2.d476893d.chunk.js.map",
-    "index.html": "/Smart-Bulb/index.html",
-    "precache-manifest.19f7cf026cbb2ec40a4c67b2ae0022c8.js": "/Smart-Bulb/precache-manifest.19f7cf026cbb2ec40a4c67b2ae0022c8.js",
-    "service-worker.js": "/Smart-Bulb/service-worker.js",
-    "static/css/2.3c03f26f.chunk.css.map": "/Smart-Bulb/static/css/2.3c03f26f.chunk.css.map",
-    "static/css/main.a5c7381c.chunk.css.map": "/Smart-Bulb/static/css/main.a5c7381c.chunk.css.map",
-    "static/js/2.d476893d.chunk.js.LICENSE.txt": "/Smart-Bulb/static/js/2.d476893d.chunk.js.LICENSE.txt"
+    "main.css": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/css/main.a5c7381c.chunk.css",
+    "main.js": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/main.fd3cdbf3.chunk.js",
+    "main.js.map": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/main.fd3cdbf3.chunk.js.map",
+    "runtime-main.js": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/runtime-main.86e2d175.js",
+    "runtime-main.js.map": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/runtime-main.86e2d175.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.d476893d.chunk.js": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/2.d476893d.chunk.js",
+    "static/js/2.d476893d.chunk.js.map": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/2.d476893d.chunk.js.map",
+    "index.html": "/ESP8266-RGB-LED-controller-with-built-in-react-app/index.html",
+    "precache-manifest.f365a72da8ae848bde9c5c068f6c0e04.js": "/ESP8266-RGB-LED-controller-with-built-in-react-app/precache-manifest.f365a72da8ae848bde9c5c068f6c0e04.js",
+    "service-worker.js": "/ESP8266-RGB-LED-controller-with-built-in-react-app/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.a5c7381c.chunk.css.map": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/css/main.a5c7381c.chunk.css.map",
+    "static/js/2.d476893d.chunk.js.LICENSE.txt": "/ESP8266-RGB-LED-controller-with-built-in-react-app/static/js/2.d476893d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d123f186.js",
+    "static/js/runtime-main.86e2d175.js",
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.d476893d.chunk.js",
     "static/css/main.a5c7381c.chunk.css",
-    "static/js/main.361bcda5.chunk.js"
+    "static/js/main.fd3cdbf3.chunk.js"
   ]
 }
