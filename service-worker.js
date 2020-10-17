@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Smart-Bulb/precache-manifest.60e32cf3ecd4a06f730d04a62643a7dc.js"
+  "/Smart-Bulb/precache-manifest.19f7cf026cbb2ec40a4c67b2ae0022c8.js"
 );
 
 self.addEventListener('message', (event) => {
